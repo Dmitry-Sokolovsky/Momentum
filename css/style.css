@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  display: none;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  /* background-image: url("https://raw.githubusercontent.com/irinainina/ready-projects/momentum/momentum/assets/images/night/17.jpg");   */
+  transition: background-image 1s ease-in-out;
+  font-size: 0.8rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.time {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.day {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background: url("../images/Update Button");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px;
+}
+
+.btn:hover {
+  filter: grayscale(0.5);
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(1.02)
+}
+
+.name:hover,
+.focus:hover,
+.city:hover {
+  color: rgb(60, 253, 22);
+}
+
+/* Weather */
+.er {
+  color: red;
+
+}
+
+.weath {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-image: url(../images/overlay.png);
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.temperature {
+  font-size: 2rem;
+}
+
+.city {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.weather-icon {
+  font-size: 4rem;
+}
+
+.weather-icon:hover {
+  animation: shake 1.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+}
+
+/* Quotes */
+
+.quote {
+  font: 0.7rem Georgia, serif;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 2em;
+  color: black;
+  margin-top: 2rem;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: linear 0.5s;
+  justify-content: center;
+  width: 40%;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
+}
+
+.quote figcaption {
+  text-align: right;
+}
+
+.cont__quote {
+  margin-top: 10px;
+  bottom: 1rem;
+  width: 6rem;
+  height: 6rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/overlay.png);
+  border-radius: 2rem;
+}
+
+.btn__quote {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: url("../images/Update Button");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px;
+  margin: 0;
+
+}
+
+.span__quote {
+  padding: 10px;
+}
+
+.btn__quote:hover,
+.btn:hover {
+  filter: grayscale(0.5);
+  cursor: pointer;
+}
+
+.btn__quote:active,
+.btn__quote:focus,
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn__quote:active,
+.btn:active {
+  transform: scale(1.02)
+}
+
+.anim__show {
+
+  opacity: 0;
+  transition: 2s;
+  animation: show 1.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 920px) {
+  .time {
+    font-size: 3.5rem;
+  }
+
+  .day {
+    font-size: 2rem;
+  }
+
+  .btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .quote {
+    font-size: 0.6rem;
+  }
+
+  .cont__quote {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .weath {
+    font-size: 0.7rem;
+  }
+
+  .temperature {
+    font-size: 1rem;
+  }
+
+  .city {
+    font-size: 1rem;
+  }
+
+  .span__quote {
+    font-size: 0.5rem;
+  }
+
+}
+
+@media (max-width: 700px) {}
+
+@media (max-width: 560px) {
+
+  .greeting,
+  .name,
+  h2 {
+    font-size: 1rem;
+  }
+
+  .time {
+    font-size: 3rem;
+  }
+
+  .day {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    height: rem;
+  }
+
+  .quote {
+    font-size: 0.6rem;
+  }
+
+  .weath {
+    font-size: 0.5rem;
+  }
+
+  .quote {
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .greeting,
+  .name,
+  h2 {
+    font-size: 0.8rem;
+  }
+
+  .time {
+    font-size: 2rem;
+  }
+
+  .day {
+    font-size: 1rem;
+  }
+
+  .btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .cont__quote {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+  }
+
+  .span__quote {
+    font-size: 8px;
+  }
+}
